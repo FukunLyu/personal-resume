@@ -155,7 +155,7 @@ a:focus {
   scroll-margin-top: 24px;
 }
 
-.page-content h3 {
+.page-content h2 {
   margin-bottom: 32px;
   padding-bottom: 14px;
   border-bottom: 1px solid $site-border;
@@ -209,7 +209,7 @@ a:focus {
   margin-bottom: 20px;
 }
 
-#projects + .layout .details h4 {
+#projects + .layout .details h3 {
   margin-bottom: 8px;
   color: $site-text;
   font-size: 2.4rem;
@@ -267,7 +267,7 @@ a:focus {
 }
 
 .dark .hero,
-.dark .page-content h3,
+.dark .page-content h2,
 .dark .profile-img,
 .dark #skills + .row p,
 .dark #projects + .layout,
@@ -276,8 +276,8 @@ a:focus {
 }
 
 .dark .hero h1,
-.dark .page-content h3,
-.dark #projects + .layout .details h4,
+.dark .page-content h2,
+.dark #projects + .layout .details h3,
 .dark .site-nav a {
   color: $site-dark-text;
 }

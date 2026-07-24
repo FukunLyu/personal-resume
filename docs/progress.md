@@ -3,12 +3,74 @@
 ## 阶段概况
 
 - 记录日期：2026-07-24
-- 当前阶段：Hero 行动入口、页面导航、视觉与响应式
+- 当前阶段：GitHub Pages 发布与线上验收
 - 仓库：`824man824-bit/personal-resume`
 - 本地目录：`[本地工作区路径不公开]`
 - 当前分支：`master`
 - 远程分支：`origin/master`
-- 阶段状态：已完成 Hero 行动入口、页内导航、主要视觉、深色模式、焦点与响应式规则；头像资源、正式 Jekyll 构建及部署验证仍待后续阶段完成
+- 阶段状态：GitHub Pages 首次正式构建与部署成功；线上验收后按用户反馈完成文字高亮、头像居中裁剪与标题层级修复，等待最终提交重新构建
+
+## GitHub Pages 发布阶段完成事项
+
+- 已将用户明确授权的头像居中裁剪为 4:5，并以 WebP 格式保存为 `images/profile.webp`；未进行生成式重绘、美颜、换脸或背景替换。
+- 已创建提交 `0862211 fix: 修复 GitHub Pages 发布问题`，并推送至 `origin/master`。
+- 用户已确认在 GitHub 仓库 `Settings → Pages` 中选择 `Deploy from a branch`、`master`、`/(root)` 并保存。
+- GitHub 官方 `pages-build-deployment #1` 已对提交 `0862211` 完成 build、report-build-status 与 deploy，状态为 Success，总耗时 41 秒，部署地址为 `https://824man824-bit.github.io/personal-resume/`。
+- 已在未登录环境打开公开站点，完成内容、样式、图片、链接、控制台、响应式与可访问性检查。
+- 根据用户线上截图反馈，将 `p = 0.285` 从 Markdown 行内代码改为普通正文，消除不必要的粉色高亮。
+- 根据用户反馈重新从原始授权照片进行确定性 4:5 裁剪；以头部轮廓在原图上半部的中轴 `x = 222px` 为基准，采用水平范围 `62–382px`，使人物中轴对应输出图像几何中轴 `x = 200px`；未改变人物外貌、背景或色彩。
+- 将 About、Skills、Projects、Contact 区域标题从 `h3` 调整为 `h2`，并将项目标题从 `h4` 调整为 `h3`，修复标题层级跳级问题并同步更新样式选择器。
+
+## GitHub Pages 发布阶段修改的文件
+
+- `_config.yml`：移除 `p = 0.285` 的行内代码标记，恢复为普通正文。
+- `_includes/about.html`：将 About 区域标题改为 `h2`。
+- `_layouts/default.html`：将 Skills、Projects、Contact 等区域标题改为 `h2`。
+- `_includes/section-list.html`：将项目标题改为 `h3`。
+- `assets/main.scss`：将区域标题样式与深色样式选择器从 `h3` 同步改为 `h2`。
+- `images/profile.webp`：替换为人物中轴与图像中轴对齐的 `400 × 500` WebP 裁剪版本。
+- `docs/checklist.md`：依据 GitHub Pages 构建与未登录线上检查证据更新验收状态。
+- `docs/progress.md`：记录发布、用户反馈、修复、验证、决定、遗留项与下一阶段任务。
+
+## GitHub Pages 发布阶段验证结果
+
+- 已确认远端 `master` 指向提交 `0862211`，本地 `master` 与 `origin/master` 一致。
+- 保存 Pages 设置前，公开地址返回 GitHub Pages “Site not found” 404；保存设置并成功构建后，公开首页正常显示。
+- 保存 Pages 设置后，GitHub 官方 `pages-build-deployment #1` 成功：build 20 秒、report-build-status 5 秒、deploy 10 秒，生成 803 KB 的 `github-pages` 构建产物，部署目标指向预期公开地址。
+- 构建包含两条非阻塞警告：GitHub Pages 内部 Actions 的 Node.js 20 弃用提示，以及 `github-pages` gem 无法完全满足仓库 `Gemfile` 依赖的兼容性提示；两者均未导致构建或部署失败，本阶段未将其误判为 Pages 发布失败。
+- 未登录线上页面标题正确，Hero、About、Skills、Projects、Contact 均可见且顺序正确；公开内容与 PRD、设计文档一致。
+- 正式页面的 CSS、JavaScript、头像路径均包含 `/personal-resume/` 前缀；头像完整加载，首次部署版本自然尺寸为 `390 × 487`，最终本地修订版本为 `400 × 500`。
+- 线上控制台没有 warning 或 error；首页未发现站点资源 `404`。
+- 桌面 `1440 × 900` 检查中内容最大宽度为 `1080px`，主要按钮高度 `44px`，Contact 入口高度约 `52.5px`，页面没有内容遮挡或横向滚动。
+- 移动 `375 × 812` 检查中实际内容区宽 `360px` 且 `scrollWidth = 360px`，Hero 操作纵向排列，头像约 `152 × 186px`，Skills 与 Contact 为单列；约 `320px` 检查中实际内容区与 `scrollWidth` 均为 `305px`。
+- 点击“查看项目”后地址变为 `#projects`，目标标题距视口顶部约 `24px`；GitHub 链接为 `target="_blank" rel="noopener noreferrer"`，未登录打开正确账号；邮箱链接使用 `mailto:fukun.lyu@audencia.com`。
+- 深色模式计算样式为页面背景 `rgb(34, 34, 34)`、正文 `rgb(230, 230, 230)`、Hero 背景 `rgb(43, 47, 54)`；移动端正文计算字号为 `16px`，字体为设计定义的无衬线字体栈。
+- 页面焦点轮廓为约 `3px` 的蓝色实线；自动化浏览器的 Enter 注入未触发原生链接，因此仅保留 Enter 手工复核项为未完成，不将工具限制误判为站点故障。
+- CSS 中存在 `prefers-reduced-motion: reduce` 规则，关闭平滑滚动并将非必要过渡压缩至 `0.01ms`；未发现渐变规则。
+- 静态隐私与模板残留搜索未发现电话号码、出生日期、性别、政治面貌、本地磁盘路径、密码、邀请码、Token、API Key、`fretl` 或停用的项目旧表述；Footer 模板中的默认文字仅存在于被配置关闭的条件分支，线上输出未出现。
+- 最终本地修订通过 `git diff --check`；本机仍未安装 Ruby、Bundler 或 Docker，未执行本地 Jekyll 构建，继续以 GitHub Pages 官方构建作为正式构建验证。
+
+## GitHub Pages 发布阶段用户确认的决定
+
+- 使用用户提供的证件照作为头像，目标文件为 `images/profile.webp`。
+- GitHub Pages 发布源使用 `Deploy from a branch`、`master`、`/(root)`。
+- 用户允许先补齐本进行中交接记录，再继续读取 Pages 构建结果和线上验收。
+- 用户确认公开站点已打开，并指出 `p = 0.285` 字体颜色异常高光及人像未居中；本阶段按该反馈修复两项问题。
+
+## GitHub Pages 发布阶段未完成问题
+
+- 本次针对文字、头像与标题层级的最终修订尚未推送，需提交后等待新的 GitHub Pages 官方构建成功，再复核线上输出。
+- 自动化浏览器的 Enter 注入无法触发原生锚点导航，Enter 激活链接仍需用户或普通浏览器手工复核。
+- 浅色模式与浅色/深色按钮悬停组合未能在当前系统深色偏好下完整切换验证；已有 CSS 规则与早期浅色预览证据，但对应清单项保持未勾选。
+- 关闭 CSS 后的纯文档阅读顺序尚未手工复核。
+- 当前浅克隆本地历史只显示模板提交与发布修复提交，无法从本地证明“除模板外至少 4 次有意义提交”；需以后续完整远端历史或课程提交记录复核。
+
+## GitHub Pages 发布阶段下一步任务
+
+1. 提交并推送本轮文字高亮、头像居中、标题层级与验收文档修订。
+2. 等待最终 `pages-build-deployment` 成功，并确认构建对应最新提交。
+3. 在未登录公开地址复核普通正文 `p = 0.285`、新头像取景、`h1 → h2 → h3` 标题层级、资源加载和控制台。
+4. 后续如需完成全部清单，手工复核 Enter、浅色模式三态按钮与关闭 CSS 后的阅读顺序，并确认至少 4 次有意义提交。
 
 ## Hero、导航与响应式阶段完成事项
 
