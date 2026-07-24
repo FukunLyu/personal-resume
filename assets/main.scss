@@ -71,6 +71,7 @@ a:focus {
 
 .site-nav {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 8px;
   margin-bottom: 64px;
@@ -88,6 +89,36 @@ a:focus {
 .site-nav a:active {
   color: $site-accent-hover;
   text-decoration: underline;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid $site-border;
+  border-radius: 6px;
+  background: transparent;
+  color: $site-text;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  border-color: $site-accent;
+  background: #eef4fc;
+  color: $site-accent-hover;
+}
+
+.theme-toggle:focus {
+  border-color: $site-accent;
+  background: #eef4fc;
+  color: $site-accent-hover;
+  outline: 3px solid $site-accent;
+  outline-offset: 3px;
 }
 
 .hero-content {
@@ -271,7 +302,8 @@ a:focus {
 .dark .profile-img,
 .dark #skills + .row p,
 .dark #projects + .layout,
-.dark #contact + .row a {
+.dark #contact + .row a,
+.dark .theme-toggle {
   border-color: $site-dark-border;
 }
 
@@ -317,6 +349,22 @@ a:focus {
   color: $site-dark;
 }
 
+.dark .theme-toggle {
+  background: transparent;
+  color: $site-dark-text;
+}
+
+.dark .theme-toggle:hover,
+.dark .theme-toggle:focus {
+  border-color: $site-dark-accent;
+  background: #353c47;
+  color: $site-dark-accent;
+}
+
+.dark .theme-toggle:focus {
+  outline-color: $site-dark-accent;
+}
+
 @media screen and (max-width: 767px) {
   .container {
     width: calc(100% - 32px);
@@ -327,9 +375,9 @@ a:focus {
   }
 
   .site-nav {
+    flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 44px;
-    overflow-x: auto;
   }
 
   .site-nav a {
