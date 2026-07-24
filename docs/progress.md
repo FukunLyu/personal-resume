@@ -1,5 +1,71 @@
 # 项目进度
 
+## 最终 Harness 阶段概况
+
+- 记录日期：2026-07-24
+- 当前阶段：最终 Harness、验收证据、报告与 Git 交付
+- 当前分支：`master`
+- 远程分支：`origin/master`
+- 阶段状态：线上桌面与手机验收已完成，最终报告与截图证据已生成；最终提交已创建并验证为第 4 次个人提交，等待纳入 Checklist 截图、推送及推送后 Pages 构建复核
+
+## 最终 Harness 阶段完成事项
+
+- 按交接要求完整读取 `docs/progress.md`、`docs/prd.md`、`docs/design.md`、`docs/checklist.md`、当前文件树、Git 状态和最近提交；确认交接记录存在，且干净的 `master...origin/master` 与记录一致。
+- 在公开 GitHub Pages 地址执行最终 Harness，分别使用 `1440 × 900` 桌面视口和 `375 × 812` 手机视口检查 Hero、About、Skills、Projects、Contact 五个区块、页内导航、项目入口、GitHub 入口、文字、头像和横向溢出。
+- 生成 `screenshots/homepage-desktop.png`、`screenshots/homepage-mobile.png` 与 `screenshots/github-pages.png`；`screenshots/checklist.png` 在最终提交计数复核后生成。
+- 打开公开 Actions 工作流页面，确认 `pages-build-deployment` 最近 3 次运行均成功；Run `#3` 耗时 40 秒，Run `#2` 与 `#1` 均耗时 41 秒。
+- 扫描发布内容中的模板占位词和敏感值；清除 Footer 中未启用分支仍保留的 `References on request` 默认占位短语。
+- 创建 `report/final-report.md`，记录网站定位、模板选择、AI 参与、个人判断、验证、问题修复、Pages 链接与后续计划。
+- 更新 `README.md`，补充已发布状态、最终报告、验收文档与截图证据入口，并修正“头像仍待处理”的过期描述。
+
+## 最终 Harness 阶段修改的文件
+
+- `_includes/footer.html`：移除未启用分支中的默认占位短语，仅在显式配置参考标题时渲染。
+- `README.md`：更新发布状态、验收入口、截图清单与头像处理说明。
+- `docs/checklist.md`：依据本阶段新增证据和最终提交计数更新状态；没有证据的项目继续保持未勾选。
+- `docs/progress.md`：记录最终 Harness 的完成事项、文件、验证、决定、问题与下一步。
+- `report/final-report.md`：新建最终报告。
+- `screenshots/homepage-desktop.png`：公开首页桌面全页截图。
+- `screenshots/homepage-mobile.png`：公开首页手机全页截图。
+- `screenshots/github-pages.png`：GitHub Pages 工作流成功记录截图。
+- `screenshots/checklist.png`：最终验收清单截图。
+
+## 最终 Harness 阶段验证结果
+
+- 桌面视口设置为 `1440 × 900`，浏览器内容区为 `1425 × 900`；页面 `scrollWidth = 1425`，五个区块宽度受控于 `1080px`，没有横向溢出。
+- 手机视口设置为 `375 × 812`，浏览器内容区为 `360 × 812`；页面 `scrollWidth = 360`、所有元素最大右边界为 `360px`，没有横向溢出。
+- 手机端三个 Hero 操作均为 `328 × 44px` 并纵向排列；两个 Contact 入口均宽 `328px`、高约 `52.5px`；正文计算字号为 `16px`。
+- 头像加载完成，替代文字为“吕同学头像”，自然尺寸 `400 × 500`；桌面显示约 `180 × 220px`，手机显示约 `152 × 186px` 且水平居中。
+- 页面大纲为一个 `h1`、四个区块 `h2` 和一个项目 `h3`；DOM 可见内容与 PRD 一致，项目谨慎表述、技能口径和联系方式正确。
+- 点击“查看项目”后 URL 变为 `#projects`，目标标题距视口顶部约 `24.3px`，未被遮挡。
+- GitHub 链接指向 `https://github.com/824man824-bit`，并包含 `target="_blank" rel="noopener noreferrer"`；邮箱链接使用 `mailto:fukun.lyu@audencia.com`。
+- 公开首页控制台未发现 warning 或 error；CSS、JavaScript 和头像资源均正常加载。
+- 当前系统为深色偏好，计算样式为页面背景 `rgb(34, 34, 34)`、正文 `rgb(230, 230, 230)`、Hero 背景 `rgb(43, 47, 54)`。
+- 自动化浏览器的链接 `press('Enter')` 仍未触发原生导航，而鼠标点击正常；因此键盘 Enter 清单项继续保持未勾选，不将工具限制伪装为已通过。
+- 本阶段发布文件占位词复扫无命中，敏感值复扫无命中；目录完整性检查通过。
+- 单文件大小扫描覆盖已跟踪文件和本阶段交付文件；最大文件为模板原有 `screenshot.png`，大小 `721,118` 字节，未发现异常大文件。
+- 已创建最终提交 `docs: 完成验收证据和最终报告`；`git log --format='%h %s' 8901c8b..HEAD` 可见 4 次个人提交，满足作业提交数量要求。
+
+## 最终 Harness 阶段用户确认的决定
+
+- 本阶段执行最终 Harness，并以桌面和手机视口检查五个区块、导航、项目链接、GitHub 链接、文字、图片与横向溢出。
+- 必须生成四张指定截图、取得证据后才能勾选 Checklist、创建最终报告并更新 README。
+- 必须扫描占位词、敏感信息、单文件大小、目录完整性和至少 4 次个人提交。
+- 最终提交建议使用 `docs: 完成验收证据和最终报告`，并在完成后推送远程。
+
+## 最终 Harness 阶段未完成问题
+
+- 自动化浏览器无法证明 Enter 激活原生链接；对应 Checklist 项保持未勾选，建议在普通浏览器中手工复核。
+- 当前系统只有深色偏好，无法在本次浏览器控制能力内完整切换并目视验证浅色模式及浅色/深色按钮三态；相关 Checklist 项保持未勾选。
+- 当前浏览器控制能力无法关闭 CSS 后重新目视检查纯文档顺序；对应 Checklist 项保持未勾选。
+- 当前仍需将 `screenshots/checklist.png` 与最终提交计数记录 amend 到同一最终提交，并完成推送及推送后 Pages 复核。
+
+## 最终 Harness 阶段下一步任务
+
+1. 生成最终 Checklist 截图，将提交计数证据与截图 amend 到同一最终提交。
+2. 再次执行仓库扫描、`git diff --check` 与目录完整性检查。
+3. 推送 `master` 至 `origin/master`，等待 Pages 工作流完成并确认公开站点继续可用。
+
 ## 阶段概况
 
 - 记录日期：2026-07-24
