@@ -46,7 +46,8 @@ AI 没有自行补写个人经历、技能等级、项目结论或公开链接�
 - 点击“查看项目”后跳转到 `#projects`，目标标题距视口顶部约 `24.3px`。
 - GitHub 链接指向 <https://github.com/824man824-bit>，包含新页面与安全属性；邮箱使用 `mailto:fukun.lyu@audencia.com`。
 - 公开页面控制台没有 warning 或 error。
-- GitHub `pages-build-deployment` 最近 3 次运行均成功：Run `#3` 为 40 秒，Run `#2` 与 `#1` 均为 41 秒。
+- GitHub `pages-build-deployment` 最近 4 次运行均成功：最终验收提交对应 Run `#4` 为 46 秒，Run `#3` 为 40 秒，Run `#2` 与 `#1` 均为 41 秒。
+- 最终验收提交 `2267107` 已推送至 `origin/master`；推送后公开首页五个区块、标题、头像与资源继续正常，控制台无 warning 或 error。
 
 ### 5.4 仓库扫描
 
@@ -69,7 +70,7 @@ AI 没有自行补写个人经历、技能等级、项目结论或公开链接�
 
 - `screenshots/homepage-desktop.png`：公开首页桌面全页截图。
 - `screenshots/homepage-mobile.png`：公开首页手机全页截图。
-- `screenshots/github-pages.png`：GitHub Pages 工作流成功记录。
+- `screenshots/github-pages.png`：GitHub Pages Run `#1` 至 `#4` 的成功记录。
 - `screenshots/checklist.png`：最终 Checklist 证据。
 - `docs/checklist.md`：逐项验收状态。
 - `docs/progress.md`：阶段命令、数据、决定与遗留问题。

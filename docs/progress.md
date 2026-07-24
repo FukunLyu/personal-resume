@@ -6,14 +6,14 @@
 - 当前阶段：最终 Harness、验收证据、报告与 Git 交付
 - 当前分支：`master`
 - 远程分支：`origin/master`
-- 阶段状态：线上桌面与手机验收已完成，最终报告与截图证据已生成；最终提交已创建并验证为第 4 次个人提交，等待纳入 Checklist 截图、推送及推送后 Pages 构建复核
+- 阶段状态：最终 Harness、四张证据截图、报告、README、Checklist、至少 4 次个人提交、最终推送与推送后 Pages 复核均已完成
 
 ## 最终 Harness 阶段完成事项
 
 - 按交接要求完整读取 `docs/progress.md`、`docs/prd.md`、`docs/design.md`、`docs/checklist.md`、当前文件树、Git 状态和最近提交；确认交接记录存在，且干净的 `master...origin/master` 与记录一致。
 - 在公开 GitHub Pages 地址执行最终 Harness，分别使用 `1440 × 900` 桌面视口和 `375 × 812` 手机视口检查 Hero、About、Skills、Projects、Contact 五个区块、页内导航、项目入口、GitHub 入口、文字、头像和横向溢出。
 - 生成 `screenshots/homepage-desktop.png`、`screenshots/homepage-mobile.png` 与 `screenshots/github-pages.png`；`screenshots/checklist.png` 在最终提交计数复核后生成。
-- 打开公开 Actions 工作流页面，确认 `pages-build-deployment` 最近 3 次运行均成功；Run `#3` 耗时 40 秒，Run `#2` 与 `#1` 均耗时 41 秒。
+- 打开公开 Actions 工作流页面，确认最终验收提交触发的 `pages-build-deployment #4` 成功，耗时 46 秒；此前 Run `#3` 耗时 40 秒，Run `#2` 与 `#1` 均耗时 41 秒。
 - 扫描发布内容中的模板占位词和敏感值；清除 Footer 中未启用分支仍保留的 `References on request` 默认占位短语。
 - 创建 `report/final-report.md`，记录网站定位、模板选择、AI 参与、个人判断、验证、问题修复、Pages 链接与后续计划。
 - 更新 `README.md`，补充已发布状态、最终报告、验收文档与截图证据入口，并修正“头像仍待处理”的过期描述。
@@ -45,6 +45,8 @@
 - 本阶段发布文件占位词复扫无命中，敏感值复扫无命中；目录完整性检查通过。
 - 单文件大小扫描覆盖已跟踪文件和本阶段交付文件；最大文件为模板原有 `screenshot.png`，大小 `721,118` 字节，未发现异常大文件。
 - 已创建最终提交 `docs: 完成验收证据和最终报告`；`git log --format='%h %s' 8901c8b..HEAD` 可见 4 次个人提交，满足作业提交数量要求。
+- 最终验收提交 `2267107` 已推送至 `origin/master`；GitHub Pages Run `#4`（`30094588020`）成功，耗时 46 秒。
+- 推送后再次打开公开首页，五个区块与标题层级正常，头像完整加载为 `400 × 500`，页面无横向溢出，控制台仍无 warning 或 error。
 
 ## 最终 Harness 阶段用户确认的决定
 
@@ -58,13 +60,13 @@
 - 自动化浏览器无法证明 Enter 激活原生链接；对应 Checklist 项保持未勾选，建议在普通浏览器中手工复核。
 - 当前系统只有深色偏好，无法在本次浏览器控制能力内完整切换并目视验证浅色模式及浅色/深色按钮三态；相关 Checklist 项保持未勾选。
 - 当前浏览器控制能力无法关闭 CSS 后重新目视检查纯文档顺序；对应 Checklist 项保持未勾选。
-- 当前仍需将 `screenshots/checklist.png` 与最终提交计数记录 amend 到同一最终提交，并完成推送及推送后 Pages 复核。
+- 除下列缺少工具证据的三项外，没有阻塞发布或作业交付的遗留问题。
 
 ## 最终 Harness 阶段下一步任务
 
-1. 生成最终 Checklist 截图，将提交计数证据与截图 amend 到同一最终提交。
-2. 再次执行仓库扫描、`git diff --check` 与目录完整性检查。
-3. 推送 `master` 至 `origin/master`，等待 Pages 工作流完成并确认公开站点继续可用。
+1. 如需完成全部 Checklist，在普通浏览器中手工复核 Enter 激活链接。
+2. 在可切换系统外观的环境中目视复核浅色/深色按钮默认、悬停与焦点状态。
+3. 在浏览器开发工具中关闭 CSS，复核纯文档阅读顺序。
 
 ## 阶段概况
 

@@ -99,7 +99,7 @@
 
 - 桌面全页证据：`screenshots/homepage-desktop.png`；请求视口 `1440 × 900`，内容区与 `scrollWidth` 均为 `1425px`。
 - 手机全页证据：`screenshots/homepage-mobile.png`；请求视口 `375 × 812`，内容区与 `scrollWidth` 均为 `360px`。
-- Pages 证据：`screenshots/github-pages.png`；公开工作流页面显示最近 3 次 `pages-build-deployment` 均成功。
+- Pages 证据：`screenshots/github-pages.png`；公开工作流页面显示最近 4 次 `pages-build-deployment` 均成功，最终验收提交对应 Run `#4` 用时 46 秒。
 - 清单证据：`screenshots/checklist.png`；在最终提交计数复核后生成。
 - Git 证据：最终提交 `docs: 完成验收证据和最终报告` 创建后，`8901c8b..HEAD` 可见 4 次个人提交；Checklist 截图已 amend 到同一最终提交。
 - 本阶段复验确认五个区块、导航、项目入口、GitHub 属性、文字、头像和横向溢出符合预期，公开首页控制台无 warning 或 error。
