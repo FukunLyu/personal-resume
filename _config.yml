@@ -1,140 +1,106 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
-# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
+repository: 824man824-bit/personal-resume
+url: https://824man824-bit.github.io
+baseurl: /personal-resume
 
 # Content configuration version
 version: 2
 
-# Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
-# email_title: Email (Email title override)
-phone: Your phone number (optional)
-# phone_title: Phone (Phone title override)
-website: Your website (eg. https://google.com)(optional)
-# website_title: Web (Website title override)
+# Hero
+name: 吕同学
+title: 金融科技与区块链方向本科生，关注金融数据分析、业务原型开发与 AI 辅助项目实践。
+email: fukun.lyu@audencia.com
+email_title: 邮箱
+github_username: 824man824-bit
+hero_actions:
+  - label: 查看项目
+    url: "#projects"
+  - label: 访问 GitHub
+    url: https://github.com/824man824-bit
+    external: true
+  - label: 发送邮件
+    url: mailto:fukun.lyu@audencia.com
 
-# Dark Mode (true/false/never)
+# Follow the visitor's system preference.
 darkmode: false
 
-# Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-orcid_username: 0000-0000-0000-0000
-googlescholar_username: D847cGsAAAAJ
+# About
+about_title: About
+about_profile_image: images/profile.webp
+about_content: |
+  吕同学是深圳大学金融科技学院本科生，学习信息管理与信息系统及区块链方向课程，具备金融业务、技术实现和英文沟通的复合学习背景。参与过政策文本量化研究、Flask 外卖系统开发和彭博交易挑战等项目，重视变量定义、业务流程、结果验证与结论边界。
 
-# Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
+  **学习方向：** 金融科技、区块链、信息系统、金融与政策数据分析、业务系统原型开发。
 
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
-
-# About Section
-# about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
-about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
-
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
-
+# Skills, Projects, Contact
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
-  - title: Experience
-    layout: list
-    content:
-      - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
-        quote: >
-          Short description of the company (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of role
-  - title: Education
-    layout: list
-    content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
+  - title: Skills
     layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+    content: |
+      **编程基础：** C、C++、Python
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+      **Web 与数据存储：** Flask、MySQL；在项目中使用 HTML、CSS、JavaScript 完成交互页面
+
+      **数据分析：** pandas、NumPy、SciPy、statsmodels、gretl、Excel
+
+      **可视化与汇报：** Matplotlib、Seaborn、PPT、图表制作与展示汇报
+
+      **金融数据工具：** Bloomberg Terminal 基础使用
+
+      **AI 辅助工作：** 使用 Codex、ChatGPT 辅助代码调试、资料梳理、文档润色和项目迭代，并结合提示词设计、结果校验与人工判断
+
+  - title: Projects
+    layout: list
+    content:
+      - layout: top
+        title: 粤港澳大湾区低空经济产业孵化与区域攀比政策分析
+        sub_title: 中观经济学课程论文与配套数据分析项目
+        quote: >
+          分析粤港澳大湾区城市在低空经济赛道中的政策竞争特征，并检验多维政策信号与低空经济技术创新产出之间的关系。
+        description: |
+          **主要工作**
+
+          - 整理并分析 345 份粤港澳大湾区低空经济政策文本。
+          - 使用大语言模型对扶持力度、监管强度、政策确定性和综合情感进行结构化量化。
+          - 将政策指标与 2019—2024 年城市专利及宏观面板数据匹配，并使用双向固定效应面板回归控制城市经济发展水平、人口规模、科技财政支出、城市固定效应和年份固定效应。
+          - 使用 Python 完成数据采集、清洗、统计分析和可视化，并整理课程论文。
+
+          **技术与工具：** Python、requests、BeautifulSoup、pandas、NumPy、SciPy、statsmodels、大语言模型、Matplotlib、Seaborn、Word
+
+          **可公开结果**
+
+          - 345 份政策的确定性均值为 73.8，扶持强度均值为 56.4，监管强度均值为 30.7。
+          - 扶持力度与综合情感分的相关系数为 0.92；监管强度与综合情感分的相关系数为 -0.70。
+          - 双向固定效应模型中，政策综合得分系数为 0.0026，`p = 0.285`，未显示显著的直接促进作用。
+          - 科技财政支出系数为 0.5012，在 10% 显著性水平上为正；人口规模的系数在 1% 显著性水平上为负。
+
+          **表述边界：** 以上为特定样本与模型中的统计结果，不代表普遍结论或确定因果关系；“政策综合得分不显著”不等于“政策没有作用”。
+
+  - title: Contact
+    layout: text
+    content: |
+      - [访问 GitHub 主页](https://github.com/824man824-bit){:target="_blank" rel="noopener noreferrer"}
+      - [发送邮件至 fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)
 
 # Footer
-footer_show_references: true
-# references_title: References on request (Override references text)
+footer_show_references: false
 
 # Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
-
 sass:
   sass_dir: _sass
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
 
-exclude : [
-  "Gemfile",
-  "Gemfile.lock",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "lib/",
-  "scripts/",
-  "docker-compose.yml",
-  ]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - lib/
+  - scripts/
+  - docker-compose.yml
