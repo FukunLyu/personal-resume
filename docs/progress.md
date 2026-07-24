@@ -1,5 +1,58 @@
 # 项目进度
 
+## 最终提交阶段概况
+
+- 记录日期：2026-07-24
+- 当前阶段：最终提交审计、远端一致性复核与课程平台提交
+- 当前分支：`master`
+- 远程分支：`origin/master`
+- 阶段状态：本地交付物与线上站点复核通过；待创建并推送本阶段进度提交，随后使用 `vibe-submit` 预览提交包并取得用户最终确认
+
+## 最终提交阶段完成事项
+
+- 按交接要求完整读取 `docs/progress.md`、`docs/prd.md`、`docs/design.md`、`docs/checklist.md`、当前文件树、Git 状态和最近提交；确认交接记录存在，工作区初始状态为干净的 `master...origin/master`，未发现与交接记录冲突。
+- 核对本地 `HEAD`、本地远程跟踪分支与 GitHub 远端 `master`，三者在审计开始时均指向 `45b44ee15e4013ee858f6b60ed884fe30b88325a`。
+- 重新访问公开 GitHub Pages 首页，确认返回 HTTP `200`，最终地址正确，页面包含标题、“吕同学”和 `/personal-resume/images/profile.webp` 头像路径。
+- 确认 `docs/prd.md`、`docs/design.md`、`docs/checklist.md`、`report/final-report.md` 与四张指定截图均存在且可读；四张 PNG 均可正常解析并取得预期尺寸。
+- 扫描工作区与拟提交内容，未发现 `.env` 文件、密码、邀请码、Token、API Key、私钥、带凭据 URL、本地磁盘路径、手机号或身份证号模式。
+- 确认 Git 跟踪区没有 `node_modules`、`vendor`、`_site`、`.bundle`、`dist`、`build` 或 `__pycache__` 等依赖/构建目录；清理被 `.gitignore` 排除的本地 `.sass-cache/` 与 `vendor/` 生成目录。
+- 对照模板基线提交 `8901c8b` 复核大文件与主题资源：`screenshot.png`、`images/landscape-trees.jpg` 与 `_test/` 均为模板原有文件，不是本次作业新增的无关文件；本阶段新增或修改的文件均服务于网站、文档、报告或验收证据。
+
+## 最终提交阶段修改的文件
+
+- `docs/progress.md`：新增最终提交阶段的审计结果、文件、用户决定、未完成问题与下一步任务。
+- `.sass-cache/`：删除本地 Sass 缓存目录；该目录原本已被 `.gitignore` 排除，不进入 Git 提交。
+- `vendor/`：删除本地依赖目录；该目录原本已被 `.gitignore` 排除，不进入 Git 提交。
+
+## 最终提交阶段验证结果
+
+- 阶段开始时 `git status --porcelain=v1 --untracked-files=all` 无输出；本地 `HEAD`、`origin/master` 与联网读取的 `refs/heads/master` 哈希一致。
+- Pages 首页返回 HTTP `200`，响应体约 `7,973` 字节；标题、公开称呼与头像资源路径均存在。
+- 核心交付物大小：`docs/prd.md` 13,234 字节、`docs/design.md` 12,631 字节、`docs/checklist.md` 8,896 字节、`report/final-report.md` 6,497 字节。
+- 截图解析结果：桌面主页 `2100 × 2115`、手机主页 `1776 × 2532`、Pages 证据 `1424 × 930`、Checklist 证据 `1440 × 2073`；四张图片均可由图像库正常打开。
+- 凭据与隐私扫描、`.env` 文件扫描、依赖目录扫描均无拟提交内容命中；`git diff --check` 通过。
+- 除模板基线外可见 6 次作业提交，主题覆盖发布修复、线上验收、最终报告、推送记录与截图修正。
+
+## 最终提交阶段用户确认的决定
+
+- 本阶段只处理最终提交。
+- 提交前必须确认远程仓库与本地最终 Commit 一致、Pages 可访问、三份核心文档、最终报告和截图齐全。
+- 提交前必须确认没有密码、邀请码、Token、`.env`、依赖目录或无关新增文件。
+- 最后必须使用 `vibe-submit` 完成课程作业提交流程。
+
+## 最终提交阶段未完成问题
+
+- 本阶段进度记录尚需创建 Git 提交并推送至 `origin/master`，随后等待 GitHub Pages 对该提交完成部署并再次复核线上状态。
+- `vibe-submit` 预览需要课程作业码；若本地资料和插件状态中无法确定作业码，需要用户提供作业码。插件要求预览完成后再取得用户明确确认，确认前不得正式提交。
+- Checklist 中既有的 Enter 激活、完整浅色/深色按钮三态和关闭 CSS 后阅读顺序三项仍缺少证据；这些项目保持未勾选，不阻塞当前已确认的发布与课程提交。
+
+## 最终提交阶段下一步任务
+
+1. 复核本次进度差异和工作区清理结果，创建最终提交并推送 `origin/master`。
+2. 等待并核对远端分支与 Pages 对最终提交的状态。
+3. 使用 `vibe-submit` 生成提交预览，检查代码树、报告、会话、截图与排除项。
+4. 向用户展示预览摘要并取得明确确认后，正式提交课程作业；若网络失败则记录本地排队状态与重试方式。
+
 ## 最终 Harness 阶段概况
 
 - 记录日期：2026-07-24
