@@ -25,8 +25,8 @@
 - `docs/checklist.md`：依据本阶段新增证据和最终提交计数更新状态；没有证据的项目继续保持未勾选。
 - `docs/progress.md`：记录最终 Harness 的完成事项、文件、验证、决定、问题与下一步。
 - `report/final-report.md`：新建最终报告。
-- `screenshots/homepage-desktop.png`：公开首页桌面全页截图。
-- `screenshots/homepage-mobile.png`：公开首页手机全页截图。
+- `screenshots/homepage-desktop.png`：由用户提供的桌面视口截图裁切组成的分段拼图。
+- `screenshots/homepage-mobile.png`：由用户提供的手机视口截图裁切组成的分段拼图。
 - `screenshots/github-pages.png`：GitHub Pages 工作流成功记录截图。
 - `screenshots/checklist.png`：最终验收清单截图。
 
@@ -43,10 +43,15 @@
 - 当前系统为深色偏好，计算样式为页面背景 `rgb(34, 34, 34)`、正文 `rgb(230, 230, 230)`、Hero 背景 `rgb(43, 47, 54)`。
 - 自动化浏览器的链接 `press('Enter')` 仍未触发原生导航，而鼠标点击正常；因此键盘 Enter 清单项继续保持未勾选，不将工具限制伪装为已通过。
 - 本阶段发布文件占位词复扫无命中，敏感值复扫无命中；目录完整性检查通过。
-- 单文件大小扫描覆盖已跟踪文件和本阶段交付文件；最大文件为模板原有 `screenshot.png`，大小 `721,118` 字节，未发现异常大文件。
+- 单文件大小扫描覆盖已跟踪文件和本阶段交付文件；最大文件为最终桌面证据 `screenshots/homepage-desktop.png`，大小 `982,265` 字节，未发现异常大文件。
 - 已创建最终提交 `docs: 完成验收证据和最终报告`；`git log --format='%h %s' 8901c8b..HEAD` 可见 4 次个人提交，满足作业提交数量要求。
 - 最终验收提交 `2267107` 已推送至 `origin/master`；GitHub Pages Run `#4`（`30094588020`）成功，耗时 46 秒。
 - 推送后再次打开公开首页，五个区块与标题层级正常，头像完整加载为 `400 × 500`，页面无横向溢出，控制台仍无 warning 或 error。
+- 用户指出最初两张全页截图在应用内预览时出现手机图被极端缩窄、桌面图重复拼接的问题；已放弃浏览器 `fullPage` 长图输出，改为对 Hero、About、Skills、Projects、Contact 逐区块拍摄固定视口截图并组合成清晰拼图。
+- 重拍时逐项等待平滑滚动结束并读取目标位置：桌面 About、Skills、Projects 距视口顶部约 `24.3px`，手机对应位置约 `24px`；Contact 因页面底部限制以最大滚动位置拍摄，画面完整包含 Contact 入口与页脚。
+- 已目视复核替换后的 `homepage-desktop.png` 与 `homepage-mobile.png`：标签与画面一致，五个区块均清晰可读，不再出现重复拼接或极端缩窄。
+- 用户随后提供 6 张 `375 × 812` 手机视口截图与 5 张有效的 `1400 × 900` 桌面视口截图；本阶段仅做确定性裁切、缩放、标注与拼接，去除 Codex 界面、浏览器工具栏和设备外框，没有生成或改写页面内容。
+- 最终桌面证据为 `2100 × 2115`、`982,265` 字节，最终手机证据为 `1776 × 2532`、`565,039` 字节；两张图均已目视复核通过。
 
 ## 最终 Harness 阶段用户确认的决定
 
