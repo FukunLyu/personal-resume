@@ -1,106 +1,143 @@
-# Site
-repository: 824man824-bit/personal-resume
-url: https://824man824-bit.github.io
+repository: LvFuKun/personal-resume
+url: https://LvFuKun.github.io
 baseurl: /personal-resume
-
-# Content configuration version
+lang: zh-CN
+name: 吕富坤
+title: 数据分析与金融科技实习候选人
 version: 2
-
-# Hero
-name: 吕同学
-title: 金融科技与区块链方向本科生，关注金融数据分析、业务原型开发与 AI 辅助项目实践。
-email: fukun.lyu@audencia.com
-email_title: 邮箱
-github_username: 824man824-bit
+darkmode: false
 hero_actions:
   - label: 查看项目
-    url: "#projects"
-  - label: 访问 GitHub
-    url: https://github.com/824man824-bit
-    external: true
+    url: '#projects'
   - label: 发送邮件
     url: mailto:fukun.lyu@audencia.com
-
-# Follow the visitor's system preference.
-darkmode: false
-
-# About
-about_title: About
+  - label: 访问 GitHub
+    url: https://github.com/LvFuKun
+    external: true
+description: 吕富坤的个人简历，专注数据分析、金融科技与业务流程优化。
+email: fukun.lyu@audencia.com
+github_username: LvFuKun
+about_title: 个人简介
+nav_label: 页面导航
+actions_label: 主要操作
+main_label: 简历内容
+photo_alt: 吕富坤头像
+theme_dark_label: 切换为深色模式
+theme_light_label: 切换为浅色模式
+language_label: English
+language_title: 切换到英文
+language_url: /en/
+navigation:
+  - { label: 简介, id: about }
+  - { label: 技能, id: skills }
+  - { label: 项目, id: projects }
+  - { label: 联系, id: contact }
 about_profile_image: images/profile.webp
 about_content: |
-  吕同学是深圳大学金融科技学院本科生，学习信息管理与信息系统及区块链方向课程，具备金融业务、技术实现和英文沟通的复合学习背景。参与过政策文本量化研究、Flask 外卖系统开发和彭博交易挑战等项目，重视变量定义、业务流程、结果验证与结论边界。
+  深圳大学金融科技学院与法国南特高等商学院联合本科在读，具备数据处理、统计分析、数据库应用和业务流程梳理经验。希望在银行或金融科技机构从事数据分析、业务分析或金融科技相关工作。
 
-  **学习方向：** 金融科技、区块链、信息系统、金融与政策数据分析、业务系统原型开发。
+  **方向：** 数据分析 · 业务分析 · 金融科技
 
-# Skills, Projects, Contact
+  **到岗安排：** 2027 年 1 月 1 日起，每周 5 天，连续 3 个月，可线上实习。
 content:
-  - title: Skills
-    layout: text
-    content: |
-      **编程基础：** C、C++、Python
-
-      **Web 与数据存储：** Flask、MySQL；在项目中使用 HTML、CSS、JavaScript 完成交互页面
-
-      **数据分析：** pandas、NumPy、SciPy、statsmodels、gretl、Excel
-
-      **可视化与汇报：** Matplotlib、Seaborn、PPT、图表制作与展示汇报
-
-      **金融数据工具：** Bloomberg Terminal 基础使用
-
-      **AI 辅助工作：** 使用 Codex、ChatGPT 辅助代码调试、资料梳理、文档润色和项目迭代，并结合提示词设计、结果校验与人工判断
-
-  - title: Projects
+  - title: 教育背景
+    id: education
     layout: list
     content:
       - layout: top
-        title: 粤港澳大湾区低空经济产业孵化与区域攀比政策分析
-        sub_title: 中观经济学课程论文与配套数据分析项目
-        quote: >
-          分析粤港澳大湾区城市在低空经济赛道中的政策竞争特征，并检验多维政策信号与低空经济技术创新产出之间的关系。
+        title: 深圳大学金融科技学院 × 法国南特高等商学院
+        sub_title: 信息管理与信息系统 / 区块链与信息系统
+        caption: 2024 — 2028
         description: |
-          **主要工作**
+          全日制联合本科项目，BSc，全英教学。
 
-          - 整理并分析 345 份粤港澳大湾区低空经济政策文本。
-          - 使用大语言模型对扶持力度、监管强度、政策确定性和综合情感进行结构化量化。
-          - 将政策指标与 2019—2024 年城市专利及宏观面板数据匹配，并使用双向固定效应面板回归控制城市经济发展水平、人口规模、科技财政支出、城市固定效应和年份固定效应。
-          - 使用 Python 完成数据采集、清洗、统计分析和可视化，并整理课程论文。
+          重点方向：金融分析、计量经济学、数据库、数据可视化与信息系统。
 
-          **技术与工具：** Python、requests、BeautifulSoup、pandas、NumPy、SciPy、statsmodels、大语言模型、Matplotlib、Seaborn、Word
-
-          **可公开结果**
-
-          - 345 份政策的确定性均值为 73.8，扶持强度均值为 56.4，监管强度均值为 30.7。
-          - 扶持力度与综合情感分的相关系数为 0.92；监管强度与综合情感分的相关系数为 -0.70。
-          - 双向固定效应模型中，政策综合得分系数为 0.0026，p = 0.285，未显示显著的直接促进作用。
-          - 科技财政支出系数为 0.5012，在 10% 显著性水平上为正；人口规模的系数在 1% 显著性水平上为负。
-
-          **表述边界：** 以上为特定样本与模型中的统计结果，不代表普遍结论或确定因果关系；“政策综合得分不显著”不等于“政策没有作用”。
-
-  - title: Contact
+          英语：雅思 6.0（2026 年 9 月）。
+  - title: 实习经历
+    id: experience
+    layout: list
+    content:
+      - layout: top
+        title: 软通智慧信息技术有限公司
+        sub_title: 项目实施部助理
+        caption: 2025.07 — 2025.08
+        description: |
+          - 参与罗湖区现代化治理一体化平台项目，协助项目经理整理项目文档与汇报材料，分类归档并更新资料。
+          - 协助检查材料格式、信息完整性及版本一致性，整理需补充或修订的内容并反馈。
+  - title: 项目经历
+    id: projects
+    layout: list
+    content:
+      - layout: top
+        title: 广东省低空经济政策分析
+        sub_title: 政策数据分析 · 研究与结果解释
+        caption: 2026.06 — 2026.07
+        description: |
+          - 整理五座广东城市 2019—2026 年的 1,527 条政策文本，筛选 131 条有效政策，按四个维度评分，并匹配城市—季度新增企业注册数。
+          - 负责分析结果整理、结论表达及 Granger 检验与 Panel VAR 结果解释。
+          - 政策综合情感分对后续新增企业数存在统计预测关系（F = 14.431，p = 0.0002）；该结果不构成因果证据。
+      - layout: top
+        title: 金融文献分析自动化
+        sub_title: 文献处理自动化 · 输出校验与质量控制
+        caption: 2026.07
+        description: |
+          - 参与语料盘点、PDF / Markdown 路由、结构化卡片、分批校验及报告导出流程，处理 43 篇金融文献并产出 43 张卡片、6 个综合包及 52 页报告。
+          - 检查字段、格式和章节／页码／表格定位，抽样对照原论文，记录并复核重复、失败及警告项。
+          - 最终记录为 43 项有效、0 项失败、0 项警告；校验覆盖完整性、格式和可追溯性，不代表所有提取内容均准确。
+      - layout: top
+        title: 外卖系统原型
+        sub_title: 业务流程与数据库应用
+        description: |
+          - 梳理顾客、商家与骑手多角色流程，覆盖菜品查询、下单、订单跟踪和配送状态。
+          - 使用 Flask、MySQL 及 HTML / CSS / JavaScript，实践 JWT 认证、BI 看板及接口设计。
+  - title: 专业技能
+    id: skills
     layout: text
     content: |
-      - [访问 GitHub 主页](https://github.com/824man824-bit){:target="_blank" rel="noopener noreferrer"}
+      **数据处理与分析：** Python、pandas、NumPy、statsmodels；具备数据清洗、统计分析与自动化处理经验。
+
+      **数据库与原型开发：** MySQL、Flask、HTML / CSS / JavaScript；具备多角色业务流程与数据库应用实践。
+
+      **研究方法：** 政策文本量化、面板数据构建、Granger 检验与 Panel VAR。
+
+      **金融与办公工具：** Bloomberg Terminal、Excel、PowerPoint、Gretl。
+  - title: 实践经历
+    id: activities
+    layout: list
+    content:
+      - layout: top
+        title: 十五运会及残特奥会随车志愿者组长
+        caption: 2025.11 — 2025.12
+        description: 负责志愿者到岗、任务分配及临时调整，与车长沟通，参与交通接驳和现场服务协调。
+  - title: 证书
+    id: certifications
+    layout: text
+    content: |
+      - 深港澳金融科技师（SHMFTPP）一级，2026 年 7 月。
+      - OPC-AI Certified Agent Architect（Foundations），深圳大学普蓝实验室 OPC-AI 团队，2026 年 7 月。
+  - title: 联系方式
+    id: contact
+    layout: text
+    content: |
+      - [访问 GitHub 主页](https://github.com/LvFuKun){:target="_blank" rel="noopener noreferrer"}
       - [发送邮件至 fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)
-
-# Footer
 footer_show_references: false
-
-# Build settings
 sass:
   sass_dir: _sass
   style: compressed
-
 plugins:
   - jekyll-seo-tag
-
 exclude:
+  - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - lib/
+  - vendor/
+  - node_modules/
   - scripts/
-  - docker-compose.yml
+  - docs/
+  - report/
+  - screenshots/
+  - screenshot.png
+  - _test/

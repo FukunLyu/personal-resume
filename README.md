@@ -1,53 +1,38 @@
-# 吕同学的个人网站
+# 吕富坤的个人简历
 
-这是《Web 开发实训》作业中的个人展示网站，基于 Jekyll 和 `modern-resume-theme` 构建，已通过 GitHub Pages 发布并完成桌面端与移动端验收。
+面向数据分析与金融科技岗位的中英文简历网站，使用 Jekyll 构建。
 
-- 仓库：`824man824-bit/personal-resume`
-- 站点地址：<https://824man824-bit.github.io/personal-resume/>
-- 页面结构：Hero、About、Skills、Projects、Contact
+站点：`https://LvFuKun.github.io/personal-resume/`。
 
-## 主要修改
+## 日常更新
 
-- 将模板的站点路径、姓名、个人定位和 GitHub 用户名替换为已确认信息。
-- 用真实简介和技能分组替换模板人物与占位内容。
-- 展示“粤港澳大湾区低空经济产业孵化与区域攀比政策分析”课程项目，并保留样本、模型和显著性限定。
-- 移除模板电话、示例邮箱、无关社交账号、示例项目、示例链接和推荐人占位内容。
-- 配置独立的 Contact 区域，只提供已确认的 GitHub 与邮箱入口。
-- 完成桌面端、移动端、链接、图片、内容、隐私和横向溢出检查，并将验收截图保存在 `screenshots/`。
+- 中文内容维护在 `_config.yml`，英文内容维护在 `_data/en.yml`，修改事实时同步更新两份内容。
+- 左上角按钮切换中文首页和 `/en/` 英文页，无需 JavaScript。两种语言共用原主题，导航、正文、图片说明和深浅主题提示均随语言切换；技术名词和证书正式名称可保留英文。
+- 沿用仓库原有主题、布局、配色和深色切换；样式为 `assets/main.scss`，头像为 `images/profile.webp`。
+- 公开联系方式为邮箱和 GitHub，不自动公开手机号及原始简历文件。
+- 本版本只保留网站运行文件、头像和许可证，不包含课程报告、历史截图或测试材料。
 
-## 验收与报告
+## 本地预览
 
-- 最终报告：[`report/final-report.md`](report/final-report.md)
-- 验收清单：[`docs/checklist.md`](docs/checklist.md)
-- 阶段记录：[`docs/progress.md`](docs/progress.md)
-- 截图证据：`screenshots/homepage-desktop.png`、`screenshots/homepage-mobile.png`、`screenshots/github-pages.png`、`screenshots/checklist.png`
+需要 Ruby 和 Bundler：
 
-## 本地运行
-
-需要 Ruby、Bundler 和项目依赖。
-
-```powershell
+```sh
 bundle install
 bundle exec jekyll serve
 ```
 
-浏览器访问 <http://localhost:4000/personal-resume/>。修改 `_config.yml` 后需要重新启动 Jekyll 服务。
+访问 <http://localhost:4000/personal-resume/>。修改 `_config.yml` 后重新启动服务。
 
-也可使用仓库内的 Docker Compose 配置：
+## 发布与检查
 
-```powershell
-docker compose up
+GitHub Pages 设置为 Settings → Pages → Deploy from a branch → `master` / root。GitHub Actions 仅检查实际简历网站的构建，不发布 Ruby Gem，不自动修改版本或创建发行版。
+
+```sh
+bundle exec jekyll build --strict_front_matter
 ```
 
-## 隐私说明
+发布前检查手机布局、导航、邮箱链接与打印预览。课程报告、历史截图不进入网站产物。
 
-- 默认不公开手机号、出生日期、性别、政治面貌、本地文件路径或任何凭据。
-- 网站只使用用户确认公开的称呼、定位、简介、技能、项目摘要、GitHub 和邮箱。
-- 头像仅使用用户确认的简历头像居中裁剪版本；不提交原始简历页面，不进行生成式重绘、美颜、换脸或背景替换。
-- 课程论文、原始数据和项目源代码只用于事实核对，未经单独授权不公开。
+## 许可
 
-## 模板与许可
-
-本项目保留原模板名称 `modern-resume-theme`。原模板仓库：<https://github.com/sproogen/modern-resume-theme>。
-
-本项目沿用原模板的 [MIT License](LICENSE)。
+本项目基于 [modern-resume-theme](https://github.com/sproogen/modern-resume-theme)，保留原 [MIT License](LICENSE)。

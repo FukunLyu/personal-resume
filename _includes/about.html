@@ -1,14 +1,13 @@
 <div class="container intro-container">
-  <h2 id="{{ site.about_title | slugify | default: 'about-me' }}">{{ site.about_title | default:
-  "About Me" }}</h2>
+  <h2 id="about">{{ resume.about_title | escape }}</h2>
   <div class="row clearfix">
     {%- if site.about_profile_image -%}
       <div class="col-xs-12 col-sm-4 col-md-3 no-print">
-        <img class="profile-img" src="{{ site.about_profile_image | relative_url }}" alt="吕同学头像">
+        <img class="profile-img" src="{{ site.about_profile_image | relative_url }}" alt="{{ resume.photo_alt | escape }}">
       </div>
     {%- endif -%}
     <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-9 col-print-12{%- endif -%}">
-      {{ site.about_content | strip | markdownify }}
+      {{ resume.about_content | strip | markdownify }}
     </div>
   </div>
 </div>

@@ -26,7 +26,7 @@
     document.body.classList.toggle("dark", isDark);
 
     if (themeToggle) {
-      var label = isDark ? "切换为浅色模式" : "切换为深色模式";
+      var label = isDark ? themeToggle.dataset.lightLabel : themeToggle.dataset.darkLabel;
       themeToggle.setAttribute("aria-pressed", String(isDark));
       themeToggle.setAttribute("aria-label", label);
       themeToggle.setAttribute("title", label);

@@ -1,0 +1,115 @@
+name: Fukun Lyu
+title: Data Analytics and FinTech Internship Candidate
+nav_label: Page navigation
+actions_label: Main actions
+main_label: Resume content
+photo_alt: Portrait of Fukun Lyu
+theme_dark_label: Switch to dark mode
+theme_light_label: Switch to light mode
+language_label: 中文
+language_title: Switch to Chinese
+language_url: /
+navigation:
+  - { label: About, id: about }
+  - { label: Skills, id: skills }
+  - { label: Projects, id: projects }
+  - { label: Contact, id: contact }
+hero_actions:
+  - label: View projects
+    url: '#projects'
+  - label: Email me
+    url: mailto:fukun.lyu@audencia.com
+  - label: Visit GitHub
+    url: https://github.com/LvFuKun
+    external: true
+about_title: About
+about_content: |
+  Joint undergraduate student at the School of FinTech, Shenzhen University, and Audencia Business School, with experience in data processing, statistical analysis, database applications and business process mapping. Seeking opportunities in data analytics, business analytics or financial technology.
+
+  **Focus:** Data analytics · Business analytics · Financial technology
+
+  **Availability:** From 1 January 2027, five days per week for three consecutive months. Open to remote internships.
+content:
+  - title: Education
+    id: education
+    layout: list
+    content:
+      - layout: top
+        title: Shenzhen University, School of FinTech & Audencia Business School
+        sub_title: Information Management and Information Systems / Blockchain and Information Systems
+        caption: 2024 — 2028
+        description: |
+          Full-time joint undergraduate programme, BSc, English-taught.
+
+          Focus areas: financial analysis, econometrics, databases, data visualization and information systems.
+
+          IELTS 6.0 (September 2026).
+  - title: Internship Experience
+    id: experience
+    layout: list
+    content:
+      - layout: top
+        title: iSoftStone Smart Information Technology Co., Ltd.
+        sub_title: Project Implementation Assistant
+        caption: Jul — Aug 2025
+        description: |
+          - Supported the Luohu District Integrated Modern Governance Platform project by organizing project documents and presentation materials, maintaining files and updating materials.
+          - Assisted with checks on formatting, completeness and version consistency; compiled items requiring updates or corrections for the project manager.
+  - title: Projects
+    id: projects
+    layout: list
+    content:
+      - layout: top
+        title: Guangdong Low-Altitude Economy Policy Analysis
+        sub_title: Policy data analysis · Research and interpretation of results
+        caption: Jun — Jul 2026
+        description: |
+          - Compiled 1,527 policy documents from five Guangdong cities (2019–2026), screened 131 relevant policies, scored four dimensions and linked them to quarterly new business registrations by city.
+          - Organized analytical findings and conclusions, and interpreted Granger tests and Panel VAR results in writing.
+          - The composite policy sentiment score showed a statistical predictive relationship with subsequent registrations (F = 14.431, p = 0.0002). This does not establish causality.
+      - layout: top
+        title: Financial Literature Analysis Automation
+        sub_title: Literature processing automation · Output validation and quality control
+        caption: Jul 2026
+        description: |
+          - Contributed to a workflow covering corpus inventory, PDF / Markdown routing, structured cards, batch validation and report export. Processed 43 financial publications into 43 cards, 6 synthesis packages and a 52-page report.
+          - Checked fields, formatting and chapter, page or table references; compared a sample of outputs with original papers, and reviewed duplicates, failures and warnings.
+          - Final validation log: 43 valid, 0 failures, 0 warnings. Checks assessed completeness, formatting and traceability; they do not establish the accuracy of all extracted content.
+      - layout: top
+        title: Food Delivery System Prototype
+        sub_title: Business processes and database applications
+        description: |
+          - Mapped customer, merchant and courier workflows covering menu queries, ordering, order tracking and delivery status.
+          - Used Flask, MySQL and HTML / CSS / JavaScript to implement JWT authentication, a BI dashboard and interface design.
+  - title: Skills
+    id: skills
+    layout: text
+    content: |
+      **Data processing and analysis:** Python, pandas, NumPy and statsmodels for data cleaning, statistical analysis and automation.
+
+      **Databases and prototyping:** MySQL, Flask and HTML / CSS / JavaScript; practical experience with multi-role business workflows and database applications.
+
+      **Research methods:** Policy text quantification, panel data construction, Granger tests and Panel VAR.
+
+      **Financial and office tools:** Bloomberg Terminal, Excel, PowerPoint and Gretl.
+  - title: Volunteering
+    id: activities
+    layout: list
+    content:
+      - layout: top
+        title: Vehicle Support Volunteer Team Lead
+        sub_title: 15th National Games and Games for Persons with Disabilities and Special Olympics
+        caption: Nov — Dec 2025
+        description: Coordinated volunteer attendance, task assignments and last-minute changes; liaised with the vehicle team lead and supported shuttle transport and on-site services.
+  - title: Certifications
+    id: certifications
+    layout: text
+    content: |
+      - Shenzhen-Hong Kong-Macao FinTech Professional Programme (SHMFTPP) — Level I, July 2026.
+      - OPC-AI Certified Agent Architect (Foundations), PLAN Lab OPC-AI Team, Shenzhen University, July 2026.
+  - title: Contact
+    id: contact
+    layout: text
+    content: |
+      - [Visit my GitHub profile](https://github.com/LvFuKun){:target="_blank" rel="noopener noreferrer"}
+      - [Email fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)

@@ -91,6 +91,25 @@ a:focus {
   text-decoration: underline;
 }
 
+.site-nav .language-toggle {
+  margin-right: auto;
+  padding: 9px 14px;
+  border: 1px solid $site-border;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+.dark .site-nav .language-toggle {
+  border-color: $site-dark-border;
+}
+
+@media screen and (max-width: 479px) {
+  .site-nav .language-toggle {
+    margin-right: calc(100% - 80px);
+  }
+}
+
 .theme-toggle {
   display: inline-flex;
   width: 44px;

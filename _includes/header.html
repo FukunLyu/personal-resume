@@ -1,28 +1,30 @@
 <header class="hero no-print">
   <div class="container hero-container">
-    <nav class="site-nav" aria-label="页面导航">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="site-nav" aria-label="{{ resume.nav_label | escape }}">
+      <a class="language-toggle" href="{{ resume.language_url | relative_url }}" lang="{% if page.locale == 'en' %}zh-CN{% else %}en{% endif %}" hreflang="{% if page.locale == 'en' %}zh-CN{% else %}en{% endif %}" aria-label="{{ resume.language_title | escape }}" title="{{ resume.language_title | escape }}">{{ resume.language_label | escape }}</a>
+      {% for link in resume.navigation %}
+        <a href="#{{ link.id }}">{{ link.label | escape }}</a>
+      {% endfor %}
       <button
         class="theme-toggle"
         type="button"
-        aria-label="切换为深色模式"
+        aria-label="{{ resume.theme_dark_label | escape }}"
         aria-pressed="false"
-        title="切换为深色模式"
+        title="{{ resume.theme_dark_label | escape }}"
+        data-dark-label="{{ resume.theme_dark_label | escape }}"
+        data-light-label="{{ resume.theme_light_label | escape }}"
       >
         <span class="fas fa-adjust" aria-hidden="true"></span>
       </button>
     </nav>
 
     <div class="hero-content">
-      <h1>{{ site.name | escape }}</h1>
-      <p class="hero-summary">{{ site.title | escape }}</p>
+      <h1>{{ resume.name | escape }}</h1>
+      <p class="hero-summary">{{ resume.title | escape }}</p>
 
-      {%- if site.hero_actions -%}
-        <div class="hero-actions" aria-label="主要操作">
-          {%- for action in site.hero_actions -%}
+      {%- if resume.hero_actions -%}
+        <div class="hero-actions" aria-label="{{ resume.actions_label | escape }}">
+          {%- for action in resume.hero_actions -%}
             <a
               class="hero-action{% if forloop.first %} hero-action--primary{% endif %}"
               href="{{ action.url | escape }}"
