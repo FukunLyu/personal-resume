@@ -1,8 +1,18 @@
 # 吕富坤的个人简历
 
-面向数据分析与金融科技岗位的中英文简历网站，使用 Jekyll 构建。
+深圳大学金融科技学院与法国南特高等商学院联合本科在读，具备数据处理、统计分析、数据库应用和业务流程梳理经验。
 
-站点：`https://LvFuKun.github.io/personal-resume/`。
+## 个人信息概览
+
+- 姓名：吕富坤（Fukun Lyu）
+- 教育背景：深圳大学金融科技学院 × 法国南特高等商学院，联合本科，2024—2028
+- 专业：信息管理与信息系统 / 区块链与信息系统
+- 技能：Python、pandas、NumPy、statsmodels、MySQL、Flask、Excel、PowerPoint
+- 语言：雅思 6.0（2026 年 9 月）
+- 邮箱：[fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)
+- GitHub：[LvFuKun](https://github.com/LvFuKun)
+
+[浏览中文简历](https://LvFuKun.github.io/personal-resume/) · [Read in English](https://LvFuKun.github.io/personal-resume/en/)
 
 ## 日常更新
 
@@ -25,7 +35,7 @@ bundle exec jekyll serve
 
 ## 发布与检查
 
-GitHub Pages 设置为 Settings → Pages → Deploy from a branch → `master` / root。GitHub Actions 仅检查实际简历网站的构建，不发布 Ruby Gem，不自动修改版本或创建发行版。
+GitHub Pages 设置为 Settings → Pages → Deploy from a branch → `master` / root。
 
 ```sh
 bundle exec jekyll build --strict_front_matter

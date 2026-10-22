@@ -1,5 +1,5 @@
 name: Fukun Lyu
-title: Data Analytics and FinTech Internship Candidate
+title: Joint Undergraduate · Shenzhen University, School of FinTech × Audencia Business School
 nav_label: Page navigation
 actions_label: Main actions
 main_label: Resume content
@@ -24,11 +24,7 @@ hero_actions:
     external: true
 about_title: About
 about_content: |
-  Joint undergraduate student at the School of FinTech, Shenzhen University, and Audencia Business School, with experience in data processing, statistical analysis, database applications and business process mapping. Seeking opportunities in data analytics, business analytics or financial technology.
-
-  **Focus:** Data analytics · Business analytics · Financial technology
-
-  **Availability:** From 1 January 2027, five days per week for three consecutive months. Open to remote internships.
+  Joint undergraduate student at the School of FinTech, Shenzhen University, and Audencia Business School, with experience in data processing, statistical analysis, database applications and business process mapping.
 content:
   - title: Education
     id: education

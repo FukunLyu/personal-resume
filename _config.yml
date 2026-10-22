@@ -3,7 +3,7 @@ url: https://LvFuKun.github.io
 baseurl: /personal-resume
 lang: zh-CN
 name: 吕富坤
-title: 数据分析与金融科技实习候选人
+title: 深圳大学金融科技学院 × 法国南特高等商学院 · 联合本科在读
 version: 2
 darkmode: false
 hero_actions:
@@ -34,11 +34,7 @@ navigation:
   - { label: 联系, id: contact }
 about_profile_image: images/profile.webp
 about_content: |
-  深圳大学金融科技学院与法国南特高等商学院联合本科在读，具备数据处理、统计分析、数据库应用和业务流程梳理经验。希望在银行或金融科技机构从事数据分析、业务分析或金融科技相关工作。
-
-  **方向：** 数据分析 · 业务分析 · 金融科技
-
-  **到岗安排：** 2027 年 1 月 1 日起，每周 5 天，连续 3 个月，可线上实习。
+  深圳大学金融科技学院与法国南特高等商学院联合本科在读，具备数据处理、统计分析、数据库应用和业务流程梳理经验。
 content:
   - title: 教育背景
     id: education
