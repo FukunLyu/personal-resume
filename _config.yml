@@ -1,5 +1,5 @@
-repository: LvFuKun/personal-resume
-url: https://LvFuKun.github.io
+repository: FukunLyu/personal-resume
+url: https://FukunLyu.github.io
 baseurl: /personal-resume
 lang: zh-CN
 name: 吕富坤
@@ -12,11 +12,11 @@ hero_actions:
   - label: 发送邮件
     url: mailto:fukun.lyu@audencia.com
   - label: 访问 GitHub
-    url: https://github.com/LvFuKun
+    url: https://github.com/FukunLyu
     external: true
 description: 吕富坤的个人简历，专注数据分析、金融科技与业务流程优化。
 email: fukun.lyu@audencia.com
-github_username: LvFuKun
+github_username: FukunLyu
 about_title: 个人简介
 nav_label: 页面导航
 actions_label: 主要操作
@@ -82,11 +82,14 @@ content:
           - 检查字段、格式和章节／页码／表格定位，抽样对照原论文，记录并复核重复、失败及警告项。
           - 最终记录为 43 项有效、0 项失败、0 项警告；校验覆盖完整性、格式和可追溯性，不代表所有提取内容均准确。
       - layout: top
-        title: 外卖系统原型
-        sub_title: 业务流程与数据库应用
+        title: FreshRoute 多角色外卖系统
+        sub_title: 测试与部署 · Flask · MySQL
+        link: https://github.com/FukunLyu/FreshRoute
+        link_text: 查看 GitHub 仓库
         description: |
-          - 梳理顾客、商家与骑手多角色流程，覆盖菜品查询、下单、订单跟踪和配送状态。
-          - 使用 Flask、MySQL 及 HTML / CSS / JavaScript，实践 JWT 认证、BI 看板及接口设计。
+          - 六人团队完成的外卖业务原型，覆盖顾客、商家、骑手、数据分析员和监管员工作流，采用 Flask、MySQL 和原生 JavaScript 构建。
+          - 本人负责功能测试、缺陷复现、回归验证、MySQL 环境配置、敏感配置隔离，以及 CI、部署配置和项目文档。
+          - 针对角色隔离、服务端定价、库存扣减和订单取消恢复等场景执行自动化测试；本地真实 MySQL 环境下 19 项测试通过。
   - title: 专业技能
     id: skills
     layout: text
@@ -116,7 +119,7 @@ content:
     id: contact
     layout: text
     content: |
-      - [访问 GitHub 主页](https://github.com/LvFuKun){:target="_blank" rel="noopener noreferrer"}
+      - [访问 GitHub 主页](https://github.com/FukunLyu){:target="_blank" rel="noopener noreferrer"}
       - [发送邮件至 fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)
 footer_show_references: false
 sass:

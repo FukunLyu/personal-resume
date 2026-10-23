@@ -20,7 +20,7 @@ hero_actions:
   - label: Email me
     url: mailto:fukun.lyu@audencia.com
   - label: Visit GitHub
-    url: https://github.com/LvFuKun
+    url: https://github.com/FukunLyu
     external: true
 about_title: About
 about_content: |
@@ -72,11 +72,14 @@ content:
           - Checked fields, formatting and chapter, page or table references; compared a sample of outputs with original papers, and reviewed duplicates, failures and warnings.
           - Final validation log: 43 valid, 0 failures, 0 warnings. Checks assessed completeness, formatting and traceability; they do not establish the accuracy of all extracted content.
       - layout: top
-        title: Food Delivery System Prototype
-        sub_title: Business processes and database applications
+        title: FreshRoute Multi-Role Food Delivery System
+        sub_title: Testing and deployment · Flask · MySQL
+        link: https://github.com/FukunLyu/FreshRoute
+        link_text: View GitHub repository
         description: |
-          - Mapped customer, merchant and courier workflows covering menu queries, ordering, order tracking and delivery status.
-          - Used Flask, MySQL and HTML / CSS / JavaScript to implement JWT authentication, a BI dashboard and interface design.
+          - Six-person team project covering customer, merchant, courier, data analyst and regulator workflows, built with Flask, MySQL and vanilla JavaScript.
+          - Responsible for functional testing, defect reproduction, regression verification, MySQL environment setup, sensitive configuration isolation, CI, deployment configuration and project documentation.
+          - Ran automated tests for role isolation, server-side pricing, inventory deduction and order-cancellation recovery; all 19 tests passed against a local MySQL environment.
   - title: Skills
     id: skills
     layout: text
@@ -107,5 +110,5 @@ content:
     id: contact
     layout: text
     content: |
-      - [Visit my GitHub profile](https://github.com/LvFuKun){:target="_blank" rel="noopener noreferrer"}
+      - [Visit my GitHub profile](https://github.com/FukunLyu){:target="_blank" rel="noopener noreferrer"}
       - [Email fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)

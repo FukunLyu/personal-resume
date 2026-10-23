@@ -10,9 +10,9 @@
 - 技能：Python、pandas、NumPy、statsmodels、MySQL、Flask、Excel、PowerPoint
 - 语言：雅思 6.0（2026 年 9 月）
 - 邮箱：[fukun.lyu@audencia.com](mailto:fukun.lyu@audencia.com)
-- GitHub：[LvFuKun](https://github.com/LvFuKun)
+- GitHub：[FukunLyu](https://github.com/FukunLyu)
 
-[浏览中文简历](https://LvFuKun.github.io/personal-resume/) · [Read in English](https://LvFuKun.github.io/personal-resume/en/)
+[浏览中文简历](https://FukunLyu.github.io/personal-resume/) · [Read in English](https://FukunLyu.github.io/personal-resume/en/)
 
 ## 日常更新
 
